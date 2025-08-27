@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Panel - Privacy Analyser</title>
+  <style>
+    body { font-family: Arial; padding: 20px; max-width: 1200px; margin: auto; }
+    h1, h2 { text-align: center; }
+    table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+    th { background-color: #f4f4f4; }
+    button { padding: 5px 10px; margin: 2px; }
+    .badge { padding: 3px 6px; border-radius: 4px; color: white; font-weight: bold; }
+    .blacklisted { background-color: red; }
+    .risky { background-color: orange; }
+    .site-link { color: blue; cursor: pointer; text-decoration: underline; }
+    .site-details { display: none; margin: 20px 0; padding: 15px; border: 1px solid #ddd; border-radius: 5px; background-color: #f9f9f9; }
+    .site-details h3 { margin-top: 0; }
+    .reviews-section { margin-top: 15px; }
+    .review-item { padding: 10px; border: 1px solid #eee; margin: 5px 0; border-radius: 3px; background-color: white; }
+    .review-item .rating { font-weight: bold; color: #ff9800; }
+    .review-item .text { margin: 5px 0; }
+    .review-item .actions { margin-top: 5px; }
+    .back-button { background-color: #4CAF50; color: white; padding: 8px 16px; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 10px; }
+    .site-stats { display: flex; gap: 20px; margin: 10px 0; }
+    .stat-box { padding: 10px; background-color: #e3f2fd; border-radius: 5px; text-align: center; }
+    .stat-box .label { font-size: 12px; color: #666; }
+    .stat-box .value { font-size: 18px; font-weight: bold; color: #1976d2; }
+  </style>
+</head>
+<body>
+  <h1>Admin Panel</h1>
+
+  <section>
+    <h2>User Reports</h2>
+    <table id="reports-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Site</th>
+          <th>Reason</th>
+          <th>Timestamp</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>All Sites Overview</h2>
+    <table id="sites-overview-table">
+      <thead>
+        <tr>
+          <th>Site</th>
+          <th>Total Reviews</th>
+          <th>Average Rating</th>
+          <th>Flags</th>
+          <th>Blacklisted</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </section>
+
+  <section id="site-detail-section" style="display: none;">
+    <button class="back-button" onclick="showSitesList()">← Back to Sites List</button>
+    <h2 id="site-detail-title">Site Details</h2>
+    
+    <div class="site-stats">
+      <div class="stat-box">
+        <div class="label">Total Reviews</div>
+        <div class="value" id="detail-total-reviews">0</div>
+      </div>
+      <div class="stat-box">
+        <div class="label">Average Rating</div>
+        <div class="value" id="detail-avg-rating">0.0</div>
+      </div>
+      <div class="stat-box">
+        <div class="label">Flags</div>
+        <div class="value" id="detail-flags">0</div>
+      </div>
+    </div>
+    
+    <div style="margin: 15px 0;">
+      <button id="mark-safe-detail-btn" style="background-color: #4CAF50; color: white; padding: 8px 16px; border: none; border-radius: 4px; cursor: pointer; margin-right: 10px;">
+        Mark Site as Safe & Unblock
+      </button>
+      <button id="blacklist-detail-btn" style="background-color: #f44336; color: white; padding: 8px 16px; border: none; border-radius: 4px; cursor: pointer;">
+        Blacklist Site
+      </button>
+    </div>
+
+    <div class="reviews-section">
+      <h3>All Reviews for this Site</h3>
+      <div id="site-reviews-container"></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Insights</h2>
+    <div id="insights"></div>
+  </section>
+
+  <script src="admin.js"></script>
+</body>
+</html>

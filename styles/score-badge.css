@@ -1,0 +1,58 @@
+.score-badge {
+  direction: ltr !important;
+  unicode-bidi: normal !important;
+  backface-visibility: visible !important;
+  transform: rotateY(180deg) !important; /* Flip back to readable */
+  -webkit-transform: rotateY(180deg) !important;
+  -moz-transform: rotateY(180deg) !important;
+  -ms-transform: rotateY(180deg) !important;
+  -o-transform: rotateY(180deg) !important;
+  position: relative !important;
+  z-index: 1000 !important;
+  font-family: Arial, sans-serif !important;
+  display: inline-block !important;
+  white-space: nowrap !important;
+  text-align: left !important;
+
+  margin-left: 6px;
+  background-color: #222 !important;
+  padding: 8px 14px;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  box-shadow: 0 0 12px 3px rgba(0, 0, 0, 0.9);
+  user-select: none;
+  vertical-align: middle;
+  text-shadow: none;
+  border: 2px solid #555;
+  color: #fff !important;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.score-badge:hover {
+  box-shadow: 0 0 20px 6px rgba(255, 255, 255, 0.8);
+}
+
+.score-badge-green {
+  color: darkgreen !important;
+  text-shadow: 0 0 6px #0f0;
+}
+
+.score-badge-red {
+  color: darkred !important;
+  text-shadow: 0 0 6px #f00;
+}
+
+.score-badge.dark-mode {
+  background-color: #444 !important;
+  box-shadow: 0 0 10px 3px rgba(0, 255, 0, 0.8) !important;
+  border-color: #0f0 !important;
+}
+
+.score-badge.dark-mode.score-badge-green {
+  color: #0f0 !important;
+}
+
+.score-badge.dark-mode.score-badge-red {
+  color: #f66 !important;
+}
