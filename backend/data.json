@@ -1,5 +1,18 @@
 {
-  "reviews": {},
+  "reviews": {
+    "https://jnanabhumi.ap.gov.in/": [
+      {
+        "rating": 5,
+        "text": "vbc"
+      }
+    ],
+    "https://wadhwanifoundation.org/": [
+      {
+        "rating": 4,
+        "text": "dfg"
+      }
+    ]
+  },
   "reports": [],
   "flaggedSites": {},
   "nextReportId": 4
