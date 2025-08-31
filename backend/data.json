@@ -1,30 +1,6 @@
 {
-  "reviews": {
-    "https://www.qis.edu.in/": [
-      {
-        "rating": 4,
-        "text": "safe"
-      },
-      {
-        "rating": 2,
-        "text": "not safe"
-      }
-    ]
-  },
-  "reports": [
-    {
-      "id": 2,
-      "site": "https://ind.1xbet.com/",
-      "reason": "not safe",
-      "timestamp": "2025-08-25T06:21:02.095Z"
-    }
-  ],
-  "flaggedSites": {
-    "https://ind.1xbet.com/": {
-      "isBlacklisted": false,
-      "isRisky": false,
-      "flags": 1
-    }
-  },
-  "nextReportId": 3
+  "reviews": {},
+  "reports": [],
+  "flaggedSites": {},
+  "nextReportId": 4
 }
