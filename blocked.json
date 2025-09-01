@@ -1,9 +1,5 @@
 {
   "blocked_sites": [
-    "examplebad.com",
-    "malwaretest.net",
-    "jnanabhumi.ap.gov.in",
-    "pricehistory.app",
-    "hackerrank.com"
+    "jnanabhumi.ap.gov.in"
   ]
 }
