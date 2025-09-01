@@ -1,6 +1,6 @@
 {
   "blocked_sites": [
     "hackerrank.com",
-    "www.hackerrank.com" // Add for subdomain blocking
+    "www.hackerrank.com"
   ]
 }
